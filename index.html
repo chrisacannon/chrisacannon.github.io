@@ -167,6 +167,10 @@
     background: var(--border);
   }
 
+  .projects-grid + .section-label {
+    margin-top: 4.5rem;
+  }
+
   /* ── PROJECT GRID ── */
   .projects-grid {
     display: grid;
@@ -408,8 +412,41 @@
 
 <!-- PROJECTS -->
 <div class="section">
-  <div class="section-label reveal">Work Samples</div>
 
+  <!-- ── DAZU ROCK CAPITAL ── -->
+  <div class="section-label reveal">Dazu Rock Capital</div>
+  <div class="projects-grid">
+
+    <!-- 1: Dazu Rock Capital — live -->
+    <a href="https://chrisacannon.github.io/dazu-rock-capital-strategy-simulation/" class="project-card full-width reveal" target="_blank">
+      <div class="card-left">
+        <div class="card-type type-live">
+          <span class="type-badge badge-live">Live Site</span>
+          Investment Strategy Simulation
+        </div>
+        <div class="card-number">01</div>
+        <div class="card-title">Tiered Portfolio Strategy Across Market Regimes</div>
+        <div class="card-subtitle">Dazu Rock Capital — Simulation</div>
+        <p class="card-desc">
+          A simulation-based demonstration of a three-tier investment framework with actively managed options positions, tested across a 2022 bear market and a 2024 bull market. Shows how systematic risk budgeting, regime classification, and active put management affect portfolio outcomes versus a passive benchmark across two historically distinct environments.
+        </p>
+        <span class="card-link">View Project <span class="card-arrow">↗</span></span>
+      </div>
+      <div class="card-right">
+        <div class="card-skills">
+          <span class="skill-tag">Financial Modeling</span>
+          <span class="skill-tag">Scenario Analysis</span>
+          <span class="skill-tag">Risk Framework Design</span>
+          <span class="skill-tag">Data Visualization</span>
+          <span class="skill-tag">Chart.js</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- ── HP INC. ── -->
+  <div class="section-label reveal">HP Inc.</div>
   <div class="projects-grid">
 
     <!-- 1: Ink Portfolio — live -->
@@ -433,34 +470,13 @@
       </div>
       <span class="card-link">View Project <span class="card-arrow">↗</span></span>
     </a>
-    <!-- 2: Dazu Rock Capital — live -->
-    <a href="https://chrisacannon.github.io/dazu-rock-capital-strategy-simulation/" class="project-card reveal" target="_blank">
-      <div class="card-type type-live">
-        <span class="type-badge badge-live">Live Site</span>
-        Investment Strategy Simulation
-      </div>
-      <div class="card-number">02</div>
-      <div class="card-title">Tiered Portfolio Strategy Across Market Regimes</div>
-      <div class="card-subtitle">Dazu Rock Capital — Simulation</div>
-      <p class="card-desc">
-        A simulation-based demonstration of a three-tier investment framework with actively managed options positions, tested across a 2022 bear market and a 2024 bull market. Shows how systematic risk budgeting, regime classification, and active put management affect portfolio outcomes versus a passive benchmark across two historically distinct environments.
-      </p>
-      <div class="card-skills">
-        <span class="skill-tag">Financial Modeling</span>
-        <span class="skill-tag">Scenario Analysis</span>
-        <span class="skill-tag">Risk Framework Design</span>
-        <span class="skill-tag">Data Visualization</span>
-        <span class="skill-tag">Chart.js</span>
-      </div>
-      <span class="card-link">View Project <span class="card-arrow">↗</span></span>
-    </a>
-    <!-- 3: Cannibalization Model — live -->
+    <!-- 2: Cannibalization Model — live -->
     <a href="https://chrisacannon.github.io/subscription-cannibalization-model/" class="project-card reveal" target="_blank">
       <div class="card-type type-live">
         <span class="type-badge badge-live">Live Site</span>
         Portfolio Strategy Simulation
       </div>
-      <div class="card-number">03</div>
+      <div class="card-number">02</div>
       <div class="card-title">Subscription Cannibalization Model</div>
       <div class="card-subtitle">HP Inc. — Analytical Framework Simulation</div>
       <p class="card-desc">
@@ -475,13 +491,46 @@
       </div>
       <span class="card-link">View Project <span class="card-arrow">↗</span></span>
     </a>
-    <!-- 4: Alcon — repo -->
+    <!-- 3: HP Print Franchise Portfolio — repo -->
+    <a href="https://github.com/chrisacannon/hp-print-scenario-analysis" class="project-card full-width reveal" target="_blank">
+      <div class="card-left">
+        <div class="card-type type-repo">
+          <span class="type-badge badge-repo">GitHub Repo</span>
+          Financial Modeling · Excel + PowerPoint
+        </div>
+        <div class="card-number">03</div>
+        <div class="card-title">HP Printing Franchise — FY27 Portfolio Investment Analysis</div>
+        <div class="card-subtitle">Independent Case Study — Public Data Only</div>
+        <p class="card-desc">
+          A self-initiated investment case evaluating two real FY27 levers for HP's Printing franchise: a new printer generation launch and Instant Ink subscription acceleration, plus a Combined Scenario modeling the point-of-sale attach effect between them. Includes scenario-driven NPV models with live toggle logic, sensitivity grids sized to each option's actual linear/non-linear behavior, portfolio scoring, and a companion deck. Built from HP's own public disclosures, with a real scope-mismatch limitation surfaced late and named plainly rather than papered over.
+        </p>
+        <span class="card-link">View on GitHub <span class="card-arrow">↗</span></span>
+      </div>
+      <div class="card-right">
+        <div class="card-skills">
+          <span class="skill-tag">Scenario Modeling</span>
+          <span class="skill-tag">NPV Analysis</span>
+          <span class="skill-tag">Sensitivity Analysis</span>
+          <span class="skill-tag">Portfolio Prioritization</span>
+          <span class="skill-tag">Excel</span>
+          <span class="skill-tag">PowerPoint</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- ── OTHER WORK ── -->
+  <div class="section-label reveal">Other Work</div>
+  <div class="projects-grid">
+
+    <!-- 1: Alcon — repo -->
     <a href="https://github.com/chrisacannon/alcon-vision-care-scenario-analysis" class="project-card reveal" target="_blank">
       <div class="card-type type-repo">
         <span class="type-badge badge-repo">GitHub Repo</span>
         Financial Modeling · Excel + PowerPoint
       </div>
-      <div class="card-number">04</div>
+      <div class="card-number">01</div>
       <div class="card-title">Alcon Vision Care Franchise — FY27 Portfolio Investment Analysis</div>
       <div class="card-subtitle">Independent Case Study — Public Data Only</div>
       <p class="card-desc">
@@ -497,13 +546,34 @@
       </div>
       <span class="card-link">View on GitHub <span class="card-arrow">↗</span></span>
     </a>
-    <!-- 5: 7-Eleven — repo -->
+    <!-- 2: FedEx — repo -->
+    <a href="https://github.com/chrisacannon/fedex-mi-commercialization-strategy" class="project-card reveal" target="_blank">
+      <div class="card-type type-repo">
+        <span class="type-badge badge-repo">GitHub Repo</span>
+        Commercialization Strategy · PowerPoint
+      </div>
+      <div class="card-number">02</div>
+      <div class="card-title">FedEx M&amp;I Commercialization Strategy</div>
+      <div class="card-subtitle">FedEx — Business Strategy Principal Interview Case</div>
+      <p class="card-desc">
+        A commercialization strategy built for a FedEx Business Strategy Principal (Go-to-Market &amp; Commercialization) interview case: unifying FedEx's Monitoring &amp; Intervention and Sensors portfolio — shipment visibility, active intervention services, sensor hardware, and RFID asset tracking — which had evolved into inconsistent packaging, pricing, and positioning. Covers portfolio, packaging &amp; pricing, positioning &amp; promotion, distribution &amp; adoption, and success metrics, with every FedEx claim sourced to public materials and a full written account of what was tested, corrected, or rejected along the way.
+      </p>
+      <div class="card-skills">
+        <span class="skill-tag">Commercialization Strategy</span>
+        <span class="skill-tag">Go-to-Market</span>
+        <span class="skill-tag">Packaging &amp; Pricing</span>
+        <span class="skill-tag">Positioning Strategy</span>
+        <span class="skill-tag">PowerPoint</span>
+      </div>
+      <span class="card-link">View on GitHub <span class="card-arrow">↗</span></span>
+    </a>
+    <!-- 3: 7-Eleven — repo -->
     <a href="https://github.com/chrisacannon/711-tobacco-promo-analysis" class="project-card reveal" target="_blank">
       <div class="card-type type-repo">
         <span class="type-badge badge-repo">GitHub Repo</span>
         Pricing Analytics
       </div>
-      <div class="card-number">05</div>
+      <div class="card-number">03</div>
       <div class="card-title">Tobacco Promotional Analysis &amp; BI Dashboard</div>
       <div class="card-subtitle">7-Eleven Style Retail Network — Simulation</div>
       <p class="card-desc">
@@ -518,13 +588,13 @@
       </div>
       <span class="card-link">View on GitHub <span class="card-arrow">↗</span></span>
     </a>
-    <!-- 6: Qlik — repo -->
+    <!-- 4: Qlik — repo -->
     <a href="https://github.com/chrisacannon/qlik-demand-plan-training-dash" class="project-card reveal" target="_blank">
       <div class="card-type type-repo">
         <span class="type-badge badge-repo">GitHub Repo</span>
         Demand Planning BI
       </div>
-      <div class="card-number">06</div>
+      <div class="card-number">04</div>
       <div class="card-title">QlikView Demand Planning KPI Dashboard</div>
       <div class="card-subtitle">1Finity Interview Preparation — Training Tool</div>
       <p class="card-desc">
@@ -540,6 +610,7 @@
     </a>
 
   </div>
+
 </div>
 
 <!-- FOOTER -->
