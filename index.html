@@ -343,6 +343,54 @@
     gap: 1rem;
   }
 
+  /* ── FEATURED PROJECT (screenshot + two links) ── */
+  .project-card.feature {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2.8rem;
+    cursor: default;
+  }
+
+  .feature-media {
+    display: block;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    overflow: hidden;
+    align-self: start;
+  }
+
+  .feature-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.92;
+    transition: opacity 0.25s, transform 0.4s ease;
+  }
+
+  .feature-media:hover img { opacity: 1; transform: scale(1.015); }
+
+  .feature-body { display: flex; flex-direction: column; }
+
+  .feature-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.6rem;
+    margin-top: auto;
+  }
+
+  .card-link.secondary { color: var(--white-dim); }
+  .card-link.secondary:hover { color: var(--gold); }
+
+  .link-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.06em;
+    color: rgba(240,236,228,0.35);
+    margin-top: 0.7rem;
+  }
+
   /* ── FOOTER ── */
   footer {
     border-top: 1px solid var(--border);
@@ -381,6 +429,8 @@
     .projects-grid { grid-template-columns: 1fr; }
     .project-card.full-width { flex-direction: column; gap: 1rem; }
     .full-width .card-right { align-items: flex-start; }
+    .project-card.feature { grid-template-columns: 1fr; gap: 1.8rem; padding: 2rem; }
+    .header-meta { flex-wrap: wrap; gap: 1rem 2rem; }
   }
 </style>
 </head>
@@ -395,7 +445,7 @@
   <h1 class="header-name">Chris <em>Cannon</em></h1>
   <div class="header-divider"></div>
   <p class="header-bio">
-    Product strategy and analytics professional with experience managing complex global portfolios, building BI dashboards, and translating data into decisions for executive audiences. Background spans product lifecycle management, pricing strategy, demand forecasting, market intelligence, and subscription business model strategy at HP Inc. Based in Richardson, TX.
+    Product strategy and analytics professional with experience managing complex global portfolios, building BI dashboards, and translating data into decisions for executive audiences. Background spans product lifecycle management, pricing strategy, demand forecasting, market intelligence, and subscription business model strategy at HP Inc. Recent work includes hands-on analytics projects in SQL and Power BI and LLM-powered pricing analysis built with Claude. Based in Richardson, TX.
   </p>
   <div class="header-meta">
     <a href="mailto:chrisacannon@gmail.com" class="meta-item">
@@ -412,6 +462,72 @@
 
 <!-- PROJECTS -->
 <div class="section">
+
+  <!-- ── RECENT PROJECTS ── -->
+  <div class="section-label reveal">Recent Projects</div>
+  <div class="projects-grid">
+
+    <!-- 1: Headphone Pricing Intelligence — live app + repo -->
+    <div class="project-card feature reveal">
+      <a href="https://github.com/chrisacannon/llm-review-pricing-analysis" class="feature-media" target="_blank" aria-label="Headphone Pricing Intelligence case study">
+        <img src="images/review-pricing.jpg" alt="Analytics view: share of reviews calling headphones overpriced, by price band" loading="lazy">
+      </a>
+      <div class="feature-body">
+        <div class="card-type type-live">
+          <span class="type-badge badge-live">Live App</span>
+          <span class="type-badge badge-repo">GitHub Repo</span>
+        </div>
+        <div class="card-number">01</div>
+        <div class="card-title">Headphone Pricing Intelligence</div>
+        <div class="card-subtitle">LLM-Powered Pricing Analysis — Python + Claude</div>
+        <p class="card-desc">
+          Claude read 12,700 Amazon headphone reviews for value-for-money verdicts across five price bands, from budget to flagship. Perceived value is flat up to $100, then drops twice: flagship buyers are about twice as likely as budget buyers to call their headphones overpriced, and their complaints shift from sound to reliability and service. Built with a hand-validated tagging step, a listing-price check that removed 39 bad listings, and an app that answers questions about the reviews with citations.
+        </p>
+        <div class="card-skills">
+          <span class="skill-tag">Pricing Strategy</span>
+          <span class="skill-tag">LLM Analysis</span>
+          <span class="skill-tag">Claude API</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Streamlit</span>
+        </div>
+        <div class="feature-links">
+          <a href="https://github.com/chrisacannon/llm-review-pricing-analysis" class="card-link" target="_blank">Read the Case Study <span class="card-arrow">↗</span></a>
+          <a href="https://llm-review-pricing-analysis.streamlit.app/" class="card-link secondary" target="_blank">Open the Live App <span class="card-arrow">↗</span></a>
+        </div>
+        <p class="link-note">The live app runs on free hosting and may take a moment to start.</p>
+      </div>
+    </div>
+
+    <!-- 2: Vehicle Hardware Tariff Exposure — repo -->
+    <div class="project-card feature reveal">
+      <a href="https://github.com/chrisacannon/vehicle-hardware-tariffs" class="feature-media" target="_blank" aria-label="Vehicle hardware tariff exposure case study">
+        <img src="images/tariff-exposure.jpg" alt="Power BI page: estimated tariff cost by origin and tariff tier" loading="lazy">
+      </a>
+      <div class="feature-body">
+        <div class="card-type type-repo">
+          <span class="type-badge badge-repo">GitHub Repo</span>
+          SQL + Power BI
+        </div>
+        <div class="card-number">02</div>
+        <div class="card-title">Vehicle Hardware Imports: Tariff Exposure by Origin</div>
+        <div class="card-subtitle">Trade &amp; Pricing Analytics — PostgreSQL + Power BI</div>
+        <p class="card-desc">
+          A sourced, verified tariff-rate layer on public U.S. trade data for motor-vehicle locks, hinges and fittings ($3.73B in 2025 imports), built to answer what the same part costs to land from Mexico, China or a trade-deal partner. Cleaned and reconciled in PostgreSQL to the source's published totals with a $0 difference across eight years, with every data decision logged, then visualized in Power BI and reconciled back to the SQL.
+        </p>
+        <div class="card-skills">
+          <span class="skill-tag">SQL (PostgreSQL)</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Data Cleaning</span>
+          <span class="skill-tag">Reconciliation</span>
+          <span class="skill-tag">Tariff &amp; Landed Cost</span>
+        </div>
+        <div class="feature-links">
+          <a href="https://github.com/chrisacannon/vehicle-hardware-tariffs" class="card-link" target="_blank">Read the Case Study <span class="card-arrow">↗</span></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <!-- ── DAZU ROCK CAPITAL ── -->
   <div class="section-label reveal">Dazu Rock Capital</div>
@@ -598,7 +714,7 @@
       <div class="card-title">QlikView Demand Planning KPI Dashboard</div>
       <div class="card-subtitle">1Finity Interview Preparation — Training Tool</div>
       <p class="card-desc">
-        A QlikView training dashboard built on a synthetic 18-month demand planning dataset, aligned to an actual company KPI template. Commissioned to standardize how a demand planning team approached KPI reporting and onboard new analysts. Demonstrates data structuring for QlikView's associative engine, KPI calculation methodology, and BI design standards for operational planning environments.
+        A QlikView training dashboard built on a synthetic 18-month demand planning dataset, aligned to an actual company KPI template. Built for and presented in a 1Finity interview to show how a demand planning team could standardize KPI reporting and onboard new analysts. Demonstrates data structuring for QlikView's associative engine, KPI calculation methodology, and BI design standards for operational planning environments.
       </p>
       <div class="card-skills">
         <span class="skill-tag">QlikView / Qlik</span>
